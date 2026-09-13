@@ -1,0 +1,20 @@
+# Programa que calcula o desconto aplicado em uma compra com base no valor da compra.
+
+#Entrada de dados
+valorCompra = int(input("Digite o valor da compra: "))
+
+# Cálculo do desconto
+if valorCompra < 200:
+    desconto = valorCompra * 0.05
+    print(f"Desconto aplicado: R$ {desconto :.2f}")
+else:
+    if valorCompra >= 200 and valorCompra < 300:
+        desconto = valorCompra * 0.10
+        print(f"Desconto aplicado: R$ {desconto :.2f}")
+    else:
+        if valorCompra >= 300:
+            desconto = valorCompra * 0.15
+        print(f"Desconto aplicado: R$ {desconto :.2f}")
+        
+# Exibição do valor final da compra após o desconto
+print(f"Valor final da compra: R$ {valorCompra - desconto :.2f}")
